@@ -22,7 +22,8 @@ return new class extends Migration
                 'active',
                 'completed',
                 'cancelled',
-            ]);
+            ])->default('pending');
+            $table->decimal('total_cost', 10, 2);
             $table->timestamps();
         });
     }
