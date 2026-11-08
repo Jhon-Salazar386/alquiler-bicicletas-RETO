@@ -21,8 +21,8 @@ class Booking extends Model
 
     protected function casts(): array {
         return [
-            'start_time' => 'dateTime',
-            'end_time' => 'dateTime',
+            'start_time' => 'datetime',
+            'end_time' => 'datetime',
             'total_cost' => 'decimal:2',
         ];
     }
