@@ -24,8 +24,9 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
 
-        Booking::factory(8)->create();
         Bike::factory(30)->create();
+
+        Booking::factory(8)->create();
 
     }
 }
