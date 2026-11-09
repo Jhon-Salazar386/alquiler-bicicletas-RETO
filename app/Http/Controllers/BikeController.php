@@ -14,7 +14,7 @@ class BikeController extends Controller
     {
         $bikes = Bike::all();
 
-        return view('bikes', compact('bikes'));
+        return view('bikes.index', compact('bikes'));
 
     }
 
@@ -37,9 +37,9 @@ class BikeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(Bike $bike)
     {
-        //
+        return view('bikes.show', compact("bike"));
     }
 
     /**
