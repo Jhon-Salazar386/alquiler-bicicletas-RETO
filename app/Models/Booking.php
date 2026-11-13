@@ -27,4 +27,12 @@ class Booking extends Model
         ];
     }
 
+    public function user(): BelongsTo {
+        return $this->belongsTo(User::class);
+    }
+
+    public function bike(): BelongsTo {
+        return $this->belongsTo(Bike::class);
+    }
+
 }

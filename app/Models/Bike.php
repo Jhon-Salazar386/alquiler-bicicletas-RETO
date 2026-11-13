@@ -22,4 +22,8 @@ class Bike extends Model
         ];
     }
 
+    public function booking(): HasMany {
+        return this->hasMany(booking::class);
+    }
+
 }
