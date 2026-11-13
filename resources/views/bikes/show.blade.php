@@ -8,6 +8,34 @@
 <body>
     <header>
         <h1>Bicicletas</h1>
+        <nav>
+
+            <!-- Navigation Links -->
+            <div>
+                <a href="{{ route('bikes.index') }}">Bikes</a>
+            </div>
+
+            <!-- Authentication Links -->
+            <div>
+
+                @guest
+                    <a href="{{ route('login') }}">Log In</a>
+
+                    <a href="{{ route('register') }}">Register</a>
+                @endguest
+
+                @auth
+                    <a href="{{ route('profile.edit') }}">Profile</a>
+
+                    <form method="POST" action="{{ route('logout') }}">
+                        @csrf
+                        <button type="submit">Log Out</button>
+                    </form>
+                @endauth
+
+            </div>
+
+        </nav>
     </header>
     <main>
         <section class="">
