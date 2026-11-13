@@ -10,7 +10,7 @@
         <h1>Bicicletas</h1>
     </header>
     <main>
-        <section class="bikes">
+        <section class="">
             
             @if($bike)
                 <table>
